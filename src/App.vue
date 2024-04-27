@@ -1,16 +1,25 @@
+<script setup>
+import { ref } from 'vue'
+
+const showModal = ref(false)
+const newNote = ref("Hello this is kennedy and I'm once again learning learning vue.js")
+
+</script>
+
 <template>
   <main>
-    <!-- <div class="overlay">
+    <div v-if="showModal" class="overlay">
       <div class="modal">
-        <textarea name="note" id="note" cols="30" rows="10"></textarea>
+        {{ newNote }}
+        <textarea v-model="newNote" name="note" id="note" cols="30" rows="10"></textarea>
         <button>Add Notes</button>
-        <button class="close">Close</button>
+        <button @click="showModal = false" class="close">Close</button>
       </div>
-    </div> -->
+    </div>
     <div class="container">
       <header>
         <h1>Notes</h1>
-        <button>+</button>
+        <button @click="showModal = true">+</button>
       </header>
       <div class="cards-container">
         <div class="card">
@@ -121,5 +130,9 @@ header button{
   .modal .close{
     background: red;
     margin-top: 7px;
+  }
+  textarea{
+    font-size: 20px;
+    padding: 10px;
   }
 </style>
