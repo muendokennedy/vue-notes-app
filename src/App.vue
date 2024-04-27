@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 
 const showModal = ref(false)
-const newNote = ref("Hello this is kennedy and I'm once again learning learning vue.js")
+const newNote = ref("")
 
 </script>
 
