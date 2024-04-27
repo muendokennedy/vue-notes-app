@@ -1,11 +1,34 @@
 <template>
   <main>
+    <!-- <div class="overlay">
+      <div class="modal">
+        <textarea name="note" id="note" cols="30" rows="10"></textarea>
+        <button>Add Notes</button>
+        <button class="close">Close</button>
+      </div>
+    </div> -->
     <div class="container">
       <header>
         <h1>Notes</h1>
         <button>+</button>
       </header>
       <div class="cards-container">
+        <div class="card">
+          <p class="main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur nostrum exercitationem omnis, minus nisi corporis!</p>
+          <p class="date">May 15th 2024</p>
+        </div>
+        <div class="card">
+          <p class="main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur nostrum exercitationem omnis, minus nisi corporis!</p>
+          <p class="date">May 15th 2024</p>
+        </div>
+        <div class="card">
+          <p class="main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur nostrum exercitationem omnis, minus nisi corporis!</p>
+          <p class="date">May 15th 2024</p>
+        </div>
+        <div class="card">
+          <p class="main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur nostrum exercitationem omnis, minus nisi corporis!</p>
+          <p class="date">May 15th 2024</p>
+        </div>
         <div class="card">
           <p class="main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur nostrum exercitationem omnis, minus nisi corporis!</p>
           <p class="date">May 15th 2024</p>
@@ -35,7 +58,7 @@ h1{
   margin-bottom: 25px;
   font-size: 75px;
 }
-button{
+header button{
   border: none;
   padding: 10px;
   width: 50px;
@@ -61,5 +84,42 @@ button{
   .date{
     font-size: 12.5px;
     font-weight: bold;
+  }
+  .cards-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.77);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal{
+    width: 750px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal button{
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 100%;
+    background: blueviolet;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  .modal .close{
+    background: red;
+    margin-top: 7px;
   }
 </style>
